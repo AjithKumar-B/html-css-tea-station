@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 :root {
   --clr-primary: #678e3e;
   --clr-primary-light: #beed8c;
@@ -135,4 +139,107 @@
   color: var(--clr-primary);
   cursor: pointer;
   transform: translateX(4%);
+}
+
+.header_content {
+  position: absolute;
+  width: 500px;
+  min-height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading_1 {
+  text-transform: capitalize;
+  font-family: cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--clr-primary);
+  animation: intro_anime_h1 5s ease-in-out 1;
+}
+
+.heading_2 {
+  width: 500px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #fff;
+  font-family: monospace;
+  animation: intro_anime_h2 5s ease-in-out 1;
+  line-height: 1;
+  letter-spacing: 2.4px;
+}
+
+.exp_btn {
+  font-size: 1.4rem;
+  letter-spacing: 2.4px;
+  font-weight: 600;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 4px;
+  background-color: var(--clr-primary);
+  color: #fff;
+  border: none;
+  animation: intro_anime_btn 5s ease-in-out 1;
+}
+
+@keyframes intro_anime_h1 {
+  0% {
+    transform: translateX(930px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-200px);
+    opacity: 25;
+  }
+
+  75% {
+    transform: translateX(75px);
+    opacity: 75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+}
+
+@keyframes intro_anime_h2 {
+  0% {
+    transform: translateX(-900px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(200px);
+    opacity: 25;
+  }
+
+  75% {
+    transform: translateX(-75px);
+    opacity: 75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+}
+
+@keyframes intro_anime_btn {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.8);
+    opacity: 50;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
