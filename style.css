@@ -5,7 +5,8 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
@@ -13,6 +14,7 @@ body {
   --clr-primary-light: #beed8c;
   --bg-blade-grey: #f1f5f8;
   --bg-blade-nav-grey: #617d98;
+  --heading-text: #102a42;
 }
 
 .top_header {
@@ -126,7 +128,7 @@ body {
   display: inline-block;
   width: 100%;
   color: var(--bg-blade-nav-grey);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
   letter-spacing: 2px;
   padding: 12px 0px;
@@ -166,13 +168,14 @@ body {
   font-size: 2rem;
   margin-bottom: 32px;
   color: #fff;
-  font-family: monospace;
+  font-family: "Roboto";
   animation: intro_anime_h2 5s ease-in-out 1;
   line-height: 1;
   letter-spacing: 2.4px;
 }
 
 .exp_btn {
+  font-family: "Roboto";
   font-size: 1.4rem;
   letter-spacing: 2.4px;
   font-weight: 600;
@@ -242,4 +245,27 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+.gradient_seperator {
+  min-height: 9px;
+  width: 100%;
+  background: linear-gradient(to right, #678e3e, #99a129, #343d0d);
+}
+
+.catergory_layout {
+}
+
+.catergory_layout_box {
+  width: 25%;
+  height: 250px;
+  background-color: red;
+  float: left;
+  background-color: var(--bg-blade-grey);
+  transition: all 0.4s ease-in-out;
+}
+
+.catergory_layout_box:hover {
+  background-color: #fff;
+  border-bottom: 2px solid var(--clr-primary);
 }
