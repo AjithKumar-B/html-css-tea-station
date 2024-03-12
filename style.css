@@ -7,6 +7,7 @@
 body {
   overflow-x: hidden;
   font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 300vh;
 }
 
 :root {
@@ -40,12 +41,12 @@ body {
 }
 
 .side_blade_window {
-  position: absolute;
+  position: fixed;
   width: 320px;
   height: 100vh;
   background-color: var(--bg-blade-grey);
   display: block;
-  z-index: 2;
+  z-index: 100;
   transform: translateX(-100%);
   transition: all 0.5s ease;
 }
@@ -178,7 +179,7 @@ body {
   font-family: "Roboto";
   font-size: 1.4rem;
   letter-spacing: 2.4px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 15px 25px;
   text-transform: uppercase;
   outline: 3px solid var(--clr-primary);
@@ -187,6 +188,13 @@ body {
   color: #fff;
   border: none;
   animation: intro_anime_btn 5s ease-in-out 1;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.exp_btn:hover {
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary);
 }
 
 @keyframes intro_anime_h1 {
@@ -253,19 +261,57 @@ body {
   background: linear-gradient(to right, #678e3e, #99a129, #343d0d);
 }
 
-.catergory_layout {
-}
-
 .catergory_layout_box {
+  position: relative;
   width: 25%;
-  height: 250px;
-  background-color: red;
+  height: 230px;
   float: left;
   background-color: var(--bg-blade-grey);
+  padding: 40px 30px;
   transition: all 0.4s ease-in-out;
+  text-align: center;
 }
 
 .catergory_layout_box:hover {
   background-color: #fff;
   border-bottom: 2px solid var(--clr-primary);
+}
+
+.catergory_layout_icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.catergory_layout_icon:hover {
+  transform: translateY(-7px);
+}
+
+.catergory_layout_icon > i {
+  font-size: 2.8rem;
+  color: var(--clr-primary);
+}
+
+.mid_text {
+  color: var(--heading-text);
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.cater_text {
+  color: var(--bg-blade-nav-grey);
+  font-size: 0.9rem;
+}
+
+.catergory_layout::after {
+  content: "";
+  display: block;
+  clear: both;
 }
